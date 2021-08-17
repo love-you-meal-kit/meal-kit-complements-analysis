@@ -9,6 +9,7 @@ import re
 import math
 import os
 
+
 # 단어 사아의 공백으로 번위 20190101 ~ 20200930
 keyword = "밀키트"
 # start_day = "2017-12-26"
@@ -16,6 +17,8 @@ start_day = "2019-12-22"
 #start_day = "2020-02-01"
 end_day = "2019-12-29"# 미만
 executable_path = './chromedriver'
+url = "https://www.bigkinds.or.kr/"
+
 
 class Search_BigKinds:
     '''
@@ -57,7 +60,6 @@ class Search_BigKinds:
         self.driver.implicitly_wait(self.wait_time)
         self.driver.maximize_window()
 
-        url = "https://www.bigkinds.or.kr/"
         try:
             self.driver.get(url);sleep(self.date_time)
         except:
@@ -140,7 +142,6 @@ class Search_BigKinds:
         '''
             현재 페이지의 뉴스 내용을 크롤링
         '''
-
         articles = self.driver.find_element(By.ID, 'news-results')
         for i in range(1,len(articles.find_elements_by_class_name('news-item'))+1):
             try:
@@ -176,7 +177,6 @@ class Search_BigKinds:
             except:
                 sleep(self.wait_time)
                 self.driver.find_element(By.XPATH, '//*[@id="news-detail-modal"]/div/div/button').click();sleep(self.click_time)            
-
             
     def display(self):
         '''
