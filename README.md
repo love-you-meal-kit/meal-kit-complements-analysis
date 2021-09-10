@@ -230,5 +230,5 @@ N-gram 분석 후 상위 250여개 데이터(n-gram_분석결과.csv)를 살펴 
 
 * **TaeRi Kim** - [Github](https://github.com/taerri)
 * **JinSol Lim** -[Github](https://github.com/jinsollim)
-* **JiIn Bang** - 
+* **JiIn Bang** - [Github](https://github.com/JiInBang123)
 * **Mingu Kang** - [Github](https://github.com/minqukanq)
